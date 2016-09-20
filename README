@@ -1,0 +1,41 @@
+Answers to Questions
+1. Yes, you should be able to use this program to generate all possible
+sentences based on the articles, nouns, and verbs described in the code. By
+running the sentence function with an undefined variable, such as:
+? - sentence(X).
+This will result in prolog suching for all possible combinations for which
+this could be true.
+2. The order of the subgoals will make a difference when trying to find all
+possible combinations of words. The order does matter, however since there
+are not multiple conditions following the statement in either sentence,
+nounphrase, or verbphrase, it would not effect the execution of the
+function.
+
+Description of Functions
+min.pl - prolog function for finding the minimum value of a list. The
+function works because it assumes the minimum value of a list containing one
+item is said item. If a list contains more than one item, the function
+compares the first two items, it then keeps the smallest item and appends
+that to the remainder of the list. This continues util the list only
+contains one item (which will be the smallest).
+
+
+sentence.pl - prolog function that parses a sentence for correctness based
+on the grammar from the textbook. The function takes a sentence as a list of
+words. It takes the furst two items from the list and checks to see if thats
+a noun phrase which is defined as a two-item list containing an article
+followed by a noun. The sentence funton takes the rest of the list and
+checks to see if its a verb phrase which is defined a verb followed by a
+noun phrase (which in this case would be the remainder of the list).
+Articles, nouns, and verbs must be axiomatically described, I descibed them
+in the file based on the example.
+
+Instructions on How to build
+-both files work in the gprolog environment on tux. Simply load the files
+and text the functions.
+
+Testing of code
+Both sets of code where tested based on the examples in assignment.
+Furthermore I tested the min function as follows because the tests in the
+assignment were not exhaustive enough:
+? - min(3,[8,6,8,9,3,1]).
